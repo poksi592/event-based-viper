@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--My Dashboard-->
+        <scene sceneID="Kq7-jd-2yX">
+            <objects>
+                <viewController storyboardIdentifier="DashboardViewControllerId" title="My Dashboard" id="pyn-gv-3fb" customClass="DashboardViewController" customModule="EventEmitterDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0aO-sG-EGy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" text="Top 3 Highlights" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Sx-Ky-syo">
+                                <rect key="frame" x="15" y="35" width="345" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="G96-ez-0WO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Payments" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Foc-Gl-IaE">
+                                <rect key="frame" x="15" y="343" width="345" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="aev-NT-pJP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="oMz-MD-v8P">
+                                <rect key="frame" x="15" y="69" width="345" height="259"/>
+                            </stackView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3dw-7q-vin">
+                                <rect key="frame" x="15" y="377" width="345" height="290"/>
+                                <connections>
+                                    <segue destination="3gx-PD-wnh" kind="embed" id="EOc-ja-jyR"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7NI-Tw-35Q" firstAttribute="trailing" secondItem="5Sx-Ky-syo" secondAttribute="trailing" constant="15" id="A02-Ei-xbR"/>
+                            <constraint firstItem="oMz-MD-v8P" firstAttribute="height" secondItem="7NI-Tw-35Q" secondAttribute="height" multiplier="0.4" id="FM1-MO-jdB"/>
+                            <constraint firstItem="7NI-Tw-35Q" firstAttribute="trailing" secondItem="oMz-MD-v8P" secondAttribute="trailing" constant="15" id="I96-7V-ZTq"/>
+                            <constraint firstItem="Foc-Gl-IaE" firstAttribute="leading" secondItem="7NI-Tw-35Q" secondAttribute="leading" constant="15" id="L1Y-Ta-LLP"/>
+                            <constraint firstItem="Foc-Gl-IaE" firstAttribute="top" secondItem="oMz-MD-v8P" secondAttribute="bottom" constant="15" id="Lu6-mM-Fb2"/>
+                            <constraint firstItem="3dw-7q-vin" firstAttribute="leading" secondItem="7NI-Tw-35Q" secondAttribute="leading" constant="15" id="OyK-Bl-3YR"/>
+                            <constraint firstItem="7NI-Tw-35Q" firstAttribute="bottom" secondItem="3dw-7q-vin" secondAttribute="bottom" id="XpM-YA-8aH"/>
+                            <constraint firstItem="3dw-7q-vin" firstAttribute="top" secondItem="Foc-Gl-IaE" secondAttribute="bottom" constant="10" id="cJX-QP-gco"/>
+                            <constraint firstItem="oMz-MD-v8P" firstAttribute="leading" secondItem="7NI-Tw-35Q" secondAttribute="leading" constant="15" id="cip-4G-ZIy"/>
+                            <constraint firstItem="oMz-MD-v8P" firstAttribute="top" secondItem="5Sx-Ky-syo" secondAttribute="bottom" constant="10" id="dqE-AV-gfa"/>
+                            <constraint firstItem="5Sx-Ky-syo" firstAttribute="top" secondItem="7NI-Tw-35Q" secondAttribute="top" constant="15" id="enM-OA-OLX"/>
+                            <constraint firstItem="5Sx-Ky-syo" firstAttribute="leading" secondItem="7NI-Tw-35Q" secondAttribute="leading" constant="15" id="j3j-Y0-fXI"/>
+                            <constraint firstItem="7NI-Tw-35Q" firstAttribute="trailing" secondItem="Foc-Gl-IaE" secondAttribute="trailing" constant="15" id="md3-UB-cwd"/>
+                            <constraint firstItem="7NI-Tw-35Q" firstAttribute="trailing" secondItem="3dw-7q-vin" secondAttribute="trailing" constant="15" id="sFd-tK-c7Q"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7NI-Tw-35Q"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pSm-kn-pvR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="173.59999999999999" y="174.96251874062969"/>
+        </scene>
+        <!--Last Payments View Controller-->
+        <scene sceneID="2DJ-fd-GEm">
+            <objects>
+                <tableViewController id="3gx-PD-wnh" customClass="LastPaymentsViewController" customModule="EventEmitterDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="PMG-5F-YIh">
+                        <rect key="frame" x="0.0" y="0.0" width="345" height="290"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="KOb-r1-PA8">
+                                <rect key="frame" x="0.0" y="28" width="345" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KOb-r1-PA8" id="GYj-me-KGd">
+                                    <rect key="frame" x="0.0" y="0.0" width="345" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="3gx-PD-wnh" id="TyX-TM-BZd"/>
+                            <outlet property="delegate" destination="3gx-PD-wnh" id="OpA-yB-dVc"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fRZ-oS-YvP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="956" y="345"/>
+        </scene>
+    </scenes>
+</document>
