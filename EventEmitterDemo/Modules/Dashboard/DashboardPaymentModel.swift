@@ -1,0 +1,20 @@
+//
+//  PaymentModel.swift
+//  EventEmitterDemo
+//
+//  Created by Mladen Despotovic on 27.07.18.
+//  Copyright © 2018 Mladen Despotovic. All rights reserved.
+//
+
+import Foundation
+
+struct DashboardPaymentModel {
+    
+    let id: Int
+    let date: Int
+    let amount: Double
+    let accountNo: String
+    let recipientAccountNo: String
+    let recipientName: String
+    let description: String
+}

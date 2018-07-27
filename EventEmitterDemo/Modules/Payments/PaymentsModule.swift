@@ -23,7 +23,8 @@ class PaymentModule: ModuleType {
     var paths: [String] = {
         return ["/pay",
                 "/cancel-payment",
-                "/refund"]
+                "/refund",
+                "/last-10-payments"]
     }()
     
     var subscribedRoutables: [ModuleRoutable.Type] = [PaymentsPresenter.self]
