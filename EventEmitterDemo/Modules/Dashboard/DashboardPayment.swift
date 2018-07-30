@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct DashboardPaymentModel {
+struct DashboardPayment: Codable {
     
     let id: Int
     let date: Int

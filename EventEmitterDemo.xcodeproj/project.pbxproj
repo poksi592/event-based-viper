@@ -36,8 +36,10 @@
 		CC42FC26210B12B800E80907 /* DashboardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC42FC25210B12B800E80907 /* DashboardPresenter.swift */; };
 		CC42FC28210B13A500E80907 /* DashboardWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC42FC27210B13A500E80907 /* DashboardWireframe.swift */; };
 		CC42FC2A210B15E300E80907 /* DashboardInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC42FC29210B15E300E80907 /* DashboardInteractor.swift */; };
-		CC42FC2E210B5DA300E80907 /* DashboardPaymentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC42FC2D210B5DA300E80907 /* DashboardPaymentModel.swift */; };
+		CC42FC2E210B5DA300E80907 /* DashboardPayment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC42FC2D210B5DA300E80907 /* DashboardPayment.swift */; };
 		CC42FC30210B5E8800E80907 /* Payments.json in Resources */ = {isa = PBXBuildFile; fileRef = CC42FC2F210B5E8800E80907 /* Payments.json */; };
+		CC42FC32210F155700E80907 /* TopHighlights.json in Resources */ = {isa = PBXBuildFile; fileRef = CC42FC31210F155700E80907 /* TopHighlights.json */; };
+		CC42FC34210F1CA300E80907 /* TopHighlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC42FC33210F1CA300E80907 /* TopHighlight.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,8 +95,10 @@
 		CC42FC25210B12B800E80907 /* DashboardPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardPresenter.swift; sourceTree = "<group>"; };
 		CC42FC27210B13A500E80907 /* DashboardWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardWireframe.swift; sourceTree = "<group>"; };
 		CC42FC29210B15E300E80907 /* DashboardInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardInteractor.swift; sourceTree = "<group>"; };
-		CC42FC2D210B5DA300E80907 /* DashboardPaymentModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardPaymentModel.swift; sourceTree = "<group>"; };
+		CC42FC2D210B5DA300E80907 /* DashboardPayment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardPayment.swift; sourceTree = "<group>"; };
 		CC42FC2F210B5E8800E80907 /* Payments.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Payments.json; sourceTree = "<group>"; };
+		CC42FC31210F155700E80907 /* TopHighlights.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TopHighlights.json; sourceTree = "<group>"; };
+		CC42FC33210F1CA300E80907 /* TopHighlight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopHighlight.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,7 +143,6 @@
 				CC281D8A20E284D700CE2673 /* PaymentsInteractor.swift */,
 				CC281D9220E524C300CE2673 /* PaymentsPresenter.swift */,
 				CC281D9E20E6428400CE2673 /* PaymentsWireframe.swift */,
-				CC42FC2F210B5E8800E80907 /* Payments.json */,
 			);
 			path = Payments;
 			sourceTree = "<group>";
@@ -234,13 +237,16 @@
 		CC42FC1C210B07A800E80907 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
-				CC42FC2D210B5DA300E80907 /* DashboardPaymentModel.swift */,
 				CC42FC1F210B11DA00E80907 /* DashboardModule.swift */,
 				CC42FC21210B11ED00E80907 /* DashboardViewController.swift */,
 				CC42FC23210B123500E80907 /* LastPaymentsViewController.swift */,
 				CC42FC25210B12B800E80907 /* DashboardPresenter.swift */,
 				CC42FC27210B13A500E80907 /* DashboardWireframe.swift */,
 				CC42FC29210B15E300E80907 /* DashboardInteractor.swift */,
+				CC42FC2D210B5DA300E80907 /* DashboardPayment.swift */,
+				CC42FC33210F1CA300E80907 /* TopHighlight.swift */,
+				CC42FC2F210B5E8800E80907 /* Payments.json */,
+				CC42FC31210F155700E80907 /* TopHighlights.json */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -357,6 +363,7 @@
 				3E5987772061879F0024F7F7 /* Assets.xcassets in Resources */,
 				3E3FE57D20B433AB000C3783 /* PaymentsStoryboard.storyboard in Resources */,
 				CC42FC30210B5E8800E80907 /* Payments.json in Resources */,
+				CC42FC32210F155700E80907 /* TopHighlights.json in Resources */,
 				3E5987752061879F0024F7F7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -395,7 +402,7 @@
 				CC42FC20210B11DA00E80907 /* DashboardModule.swift in Sources */,
 				3E5987722061879F0024F7F7 /* ViewController.swift in Sources */,
 				CC281D8B20E284D700CE2673 /* PaymentsInteractor.swift in Sources */,
-				CC42FC2E210B5DA300E80907 /* DashboardPaymentModel.swift in Sources */,
+				CC42FC2E210B5DA300E80907 /* DashboardPayment.swift in Sources */,
 				CC42FC26210B12B800E80907 /* DashboardPresenter.swift in Sources */,
 				3E3FE54020B00CAA000C3783 /* WireframeType.swift in Sources */,
 				CC281D9320E524C300CE2673 /* PaymentsPresenter.swift in Sources */,
@@ -404,6 +411,7 @@
 				CC281D9120E4C9CF00CE2673 /* ApplicationServices.swift in Sources */,
 				3E5987702061879F0024F7F7 /* AppDelegate.swift in Sources */,
 				CC281D9F20E6428400CE2673 /* PaymentsWireframe.swift in Sources */,
+				CC42FC34210F1CA300E80907 /* TopHighlight.swift in Sources */,
 				3E6F83E52068C5D3004AF262 /* PaymentsModule.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

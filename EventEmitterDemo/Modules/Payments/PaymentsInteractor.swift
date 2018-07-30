@@ -39,29 +39,6 @@ class PaymentsInteractor {
 
 class MockPaymentsNetworkService: NetworkService {
     
-    override func get(scheme: String?,
-                      host: String,
-                      path: String,
-                      parameters: [String : Any]?,
-                      completion: @escaping ([String : Any]?, HTTPURLResponse?, Error?) -> Void) {
-        
-        if path == "/last-10-payments" {
-            
-            let url = URL(schema: "https",
-                          host: host,
-                          path: path,
-                          parameters: nil)
-            
-            let urlResponse = HTTPURLResponse(url: url!,
-                                              statusCode: 200,
-                                              httpVersion: nil,
-                                              headerFields: nil)
-            
-            let last10Payments
-            completion([String: String](), urlResponse, nil)
-        }
-    }
-    
     override func post(scheme: String? = nil,
                        host: String,
                        path: String,
