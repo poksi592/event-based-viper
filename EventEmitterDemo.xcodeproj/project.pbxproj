@@ -40,6 +40,12 @@
 		CC42FC30210B5E8800E80907 /* Payments.json in Resources */ = {isa = PBXBuildFile; fileRef = CC42FC2F210B5E8800E80907 /* Payments.json */; };
 		CC42FC32210F155700E80907 /* TopHighlights.json in Resources */ = {isa = PBXBuildFile; fileRef = CC42FC31210F155700E80907 /* TopHighlights.json */; };
 		CC42FC34210F1CA300E80907 /* TopHighlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC42FC33210F1CA300E80907 /* TopHighlight.swift */; };
+		CC42FC36210F56F100E80907 /* TopHighlightView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC42FC35210F56F100E80907 /* TopHighlightView.xib */; };
+		CC42FC38210F570800E80907 /* TopHighlightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC42FC37210F570800E80907 /* TopHighlightView.swift */; };
+		CC42FC3C2110546400E80907 /* DashboardMedia.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC42FC3B2110546400E80907 /* DashboardMedia.xcassets */; };
+		CC42FC3E211066EB00E80907 /* TopHighlightViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC42FC3D211066EB00E80907 /* TopHighlightViewModel.swift */; };
+		CC42FC40211079DC00E80907 /* TopHighlightsSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC42FC3F211079DC00E80907 /* TopHighlightsSectionView.swift */; };
+		CC42FC4221108EC800E80907 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC42FC4121108EC800E80907 /* UIViewExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +105,12 @@
 		CC42FC2F210B5E8800E80907 /* Payments.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Payments.json; sourceTree = "<group>"; };
 		CC42FC31210F155700E80907 /* TopHighlights.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TopHighlights.json; sourceTree = "<group>"; };
 		CC42FC33210F1CA300E80907 /* TopHighlight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopHighlight.swift; sourceTree = "<group>"; };
+		CC42FC35210F56F100E80907 /* TopHighlightView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopHighlightView.xib; sourceTree = "<group>"; };
+		CC42FC37210F570800E80907 /* TopHighlightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopHighlightView.swift; sourceTree = "<group>"; };
+		CC42FC3B2110546400E80907 /* DashboardMedia.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = DashboardMedia.xcassets; sourceTree = "<group>"; };
+		CC42FC3D211066EB00E80907 /* TopHighlightViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopHighlightViewModel.swift; sourceTree = "<group>"; };
+		CC42FC3F211079DC00E80907 /* TopHighlightsSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopHighlightsSectionView.swift; sourceTree = "<group>"; };
+		CC42FC4121108EC800E80907 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,6 +242,7 @@
 				3E6F83E02065756F004AF262 /* URLExtensions.swift */,
 				3E3FE58220B45399000C3783 /* VCExtensions.swift */,
 				CC281D8E20E3935C00CE2673 /* WeakContainer.swift */,
+				CC42FC4121108EC800E80907 /* UIViewExtensions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -237,18 +250,39 @@
 		CC42FC1C210B07A800E80907 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
-				CC42FC1F210B11DA00E80907 /* DashboardModule.swift */,
+				CC42FC3A2110543A00E80907 /* Entity */,
+				CC42FC392110542500E80907 /* Presentation */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		CC42FC392110542500E80907 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
 				CC42FC21210B11ED00E80907 /* DashboardViewController.swift */,
 				CC42FC23210B123500E80907 /* LastPaymentsViewController.swift */,
 				CC42FC25210B12B800E80907 /* DashboardPresenter.swift */,
 				CC42FC27210B13A500E80907 /* DashboardWireframe.swift */,
+				CC42FC35210F56F100E80907 /* TopHighlightView.xib */,
+				CC42FC37210F570800E80907 /* TopHighlightView.swift */,
+				CC42FC3B2110546400E80907 /* DashboardMedia.xcassets */,
+				CC42FC3D211066EB00E80907 /* TopHighlightViewModel.swift */,
+				CC42FC3F211079DC00E80907 /* TopHighlightsSectionView.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		CC42FC3A2110543A00E80907 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				CC42FC1F210B11DA00E80907 /* DashboardModule.swift */,
 				CC42FC29210B15E300E80907 /* DashboardInteractor.swift */,
 				CC42FC2D210B5DA300E80907 /* DashboardPayment.swift */,
 				CC42FC33210F1CA300E80907 /* TopHighlight.swift */,
 				CC42FC2F210B5E8800E80907 /* Payments.json */,
 				CC42FC31210F155700E80907 /* TopHighlights.json */,
 			);
-			path = Dashboard;
+			path = Entity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,6 +395,8 @@
 				CC42FC1E210B07F500E80907 /* DashboardStoryboard.storyboard in Resources */,
 				3E59877A2061879F0024F7F7 /* LaunchScreen.storyboard in Resources */,
 				3E5987772061879F0024F7F7 /* Assets.xcassets in Resources */,
+				CC42FC3C2110546400E80907 /* DashboardMedia.xcassets in Resources */,
+				CC42FC36210F56F100E80907 /* TopHighlightView.xib in Resources */,
 				3E3FE57D20B433AB000C3783 /* PaymentsStoryboard.storyboard in Resources */,
 				CC42FC30210B5E8800E80907 /* Payments.json in Resources */,
 				CC42FC32210F155700E80907 /* TopHighlights.json in Resources */,
@@ -405,14 +441,18 @@
 				CC42FC2E210B5DA300E80907 /* DashboardPayment.swift in Sources */,
 				CC42FC26210B12B800E80907 /* DashboardPresenter.swift in Sources */,
 				3E3FE54020B00CAA000C3783 /* WireframeType.swift in Sources */,
+				CC42FC40211079DC00E80907 /* TopHighlightsSectionView.swift in Sources */,
 				CC281D9320E524C300CE2673 /* PaymentsPresenter.swift in Sources */,
 				3E6F83E12065756F004AF262 /* URLExtensions.swift in Sources */,
 				CC281D8F20E3935C00CE2673 /* WeakContainer.swift in Sources */,
 				CC281D9120E4C9CF00CE2673 /* ApplicationServices.swift in Sources */,
 				3E5987702061879F0024F7F7 /* AppDelegate.swift in Sources */,
+				CC42FC4221108EC800E80907 /* UIViewExtensions.swift in Sources */,
 				CC281D9F20E6428400CE2673 /* PaymentsWireframe.swift in Sources */,
 				CC42FC34210F1CA300E80907 /* TopHighlight.swift in Sources */,
 				3E6F83E52068C5D3004AF262 /* PaymentsModule.swift in Sources */,
+				CC42FC38210F570800E80907 /* TopHighlightView.swift in Sources */,
+				CC42FC3E211066EB00E80907 /* TopHighlightViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -45,7 +45,7 @@ class DashboardInteractor {
                 return
             }
             
-            let topHighlights: [TopHighlight?] = responseDict.map { (topHighlightObject) in
+            let topHighlights: [TopHighlight] = responseDict.compactMap { (topHighlightObject) in
                 
                 guard let dataObject = try? JSONSerialization.data(withJSONObject: topHighlightObject,
                                                                    options: .prettyPrinted),
@@ -54,7 +54,8 @@ class DashboardInteractor {
                 }
                 return topHighlight
             }
-            completion(topHighlights.compactMap { $0 }, nil)
+            
+            completion(topHighlights, nil)
         }
     }
     

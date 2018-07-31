@@ -10,8 +10,9 @@ import Foundation
 
 struct TopHighlight: Codable {
     
+    let type: String
     let title: String
-    let amount: Decimal
-    let recipientName: String
-    let description: String
+    let amount: Double
+    let from: String
+    let text: String
 }

@@ -33,4 +33,15 @@ class DashboardPresenter: ModuleRoutable {
                                                      parameters: parameters)
         }
     }
+    
+    func getHighlights(completion: @escaping ([TopHighlightViewModel]?) -> Void) {
+        
+        print("gadvaaa")
+        interactor.getTopHighlights { (topHighlights, error) in
+
+            // We shall not tackle error handling here
+            let topHighlightsViewModels = topHighlights?.compactMap { TopHighlightViewModel(model: $0) }
+            completion(topHighlightsViewModels)
+        }
+    }
 }

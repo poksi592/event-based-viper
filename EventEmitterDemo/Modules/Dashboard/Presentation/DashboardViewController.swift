@@ -11,10 +11,19 @@ import UIKit
 
 class DashboardViewController: UIViewController {
     
+    @IBOutlet weak var highlights: TopHighlightsSectionView!
     var presenter: DashboardPresenter?
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
+        // Update Highlighs UIStackView Section
+        presenter?.getHighlights() { [weak self] highlightsViewModels in
+            
+            if let highlightsViewModels = highlightsViewModels {
+                self?.highlights.addSubviews(with: highlightsViewModels)
+            }
+        }
     }
 }

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TopHighlightView" customModule="EventEmitterDemo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="191"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Double charge, perhaps?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xv1-8e-FGl">
+                    <rect key="frame" x="15" y="8" width="308" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="24" id="fJz-dF-gfY"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="18"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-234,40 €" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PYm-er-NSU">
+                    <rect key="frame" x="15" y="157" width="345" height="28"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="28" id="iE1-qI-mRy"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="black" pointSize="22"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alert-green" translatesAutoresizingMaskIntoConstraints="NO" id="HoP-G5-8pN">
+                    <rect key="frame" x="338" y="10" width="22" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="22" id="HLO-15-1PA"/>
+                        <constraint firstAttribute="width" constant="22" id="ctv-ZA-pLP"/>
+                    </constraints>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="9TC-NH-M5Y">
+                    <rect key="frame" x="15" y="36" width="345" height="117"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="From:  Fellow Brothers Ltd" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rah-g1-VaL">
+                            <rect key="frame" x="0.0" y="0.0" width="345" height="18"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="18" id="7es-6h-Yx7"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P4u-RJ-fqv">
+                            <rect key="frame" x="0.0" y="23" width="345" height="94"/>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="16" id="Cs3-3t-9Nb"/>
+                            </constraints>
+                            <string key="text">Amount was double the last time, when it was -123.20 , qeweugfw eufzgqw efiuqg weufgq wuef gquweg fuqzegw fuqzegw fouqegw fouqzegw fouzqegw fozuqg wefozgq ewofzgq eb iuzEG OUEGZ </string>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="0.78361832789999997" green="0.99953407049999998" blue="0.97987507330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="9TC-NH-M5Y" firstAttribute="top" secondItem="HoP-G5-8pN" secondAttribute="bottom" constant="4" id="0Ma-uF-ifT"/>
+                <constraint firstAttribute="trailing" secondItem="9TC-NH-M5Y" secondAttribute="trailing" constant="15" id="7Zr-UC-unG"/>
+                <constraint firstItem="xv1-8e-FGl" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="IFE-fk-mYz"/>
+                <constraint firstItem="PYm-er-NSU" firstAttribute="top" secondItem="9TC-NH-M5Y" secondAttribute="bottom" constant="4" id="Iaa-Sw-Pel"/>
+                <constraint firstItem="HoP-G5-8pN" firstAttribute="leading" secondItem="xv1-8e-FGl" secondAttribute="trailing" constant="15" id="Pym-Fo-CQn"/>
+                <constraint firstItem="HoP-G5-8pN" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="Qd8-Py-bxA"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="PYm-er-NSU" secondAttribute="trailing" constant="15" id="Wrx-sN-gpA"/>
+                <constraint firstItem="9TC-NH-M5Y" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="c7g-TF-WJl"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="PYm-er-NSU" secondAttribute="bottom" constant="6" id="fxG-Hy-7En"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="HoP-G5-8pN" secondAttribute="trailing" constant="15" id="oNQ-me-y6T"/>
+                <constraint firstItem="PYm-er-NSU" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="qh0-5z-iaH"/>
+                <constraint firstItem="xv1-8e-FGl" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="vOi-DU-Jfx"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="from" destination="rah-g1-VaL" id="NKK-gF-NgC"/>
+                <outlet property="fromHeightConstraint" destination="7es-6h-Yx7" id="bvd-aY-kYM"/>
+                <outlet property="icon" destination="HoP-G5-8pN" id="32D-dU-w9J"/>
+                <outlet property="text" destination="P4u-RJ-fqv" id="ITr-9N-WaV"/>
+                <outlet property="textHeightConstraint" destination="Cs3-3t-9Nb" id="K7D-Ci-sUB"/>
+                <outlet property="title" destination="xv1-8e-FGl" id="7ZB-xE-bGx"/>
+                <outlet property="transactionAmount" destination="PYm-er-NSU" id="vE3-AH-1Nj"/>
+            </connections>
+            <point key="canvasLocation" x="333" y="-221"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="alert-green" width="128" height="128"/>
+    </resources>
+</document>
