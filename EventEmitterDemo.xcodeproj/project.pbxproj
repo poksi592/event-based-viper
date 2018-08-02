@@ -46,6 +46,7 @@
 		CC42FC3E211066EB00E80907 /* TopHighlightViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC42FC3D211066EB00E80907 /* TopHighlightViewModel.swift */; };
 		CC42FC40211079DC00E80907 /* TopHighlightsSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC42FC3F211079DC00E80907 /* TopHighlightsSectionView.swift */; };
 		CC42FC4221108EC800E80907 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC42FC4121108EC800E80907 /* UIViewExtensions.swift */; };
+		CC42FC44211197DB00E80907 /* TopHighlightsSectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC42FC43211197DB00E80907 /* TopHighlightsSectionViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +112,7 @@
 		CC42FC3D211066EB00E80907 /* TopHighlightViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopHighlightViewModel.swift; sourceTree = "<group>"; };
 		CC42FC3F211079DC00E80907 /* TopHighlightsSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopHighlightsSectionView.swift; sourceTree = "<group>"; };
 		CC42FC4121108EC800E80907 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		CC42FC43211197DB00E80907 /* TopHighlightsSectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopHighlightsSectionViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,6 +270,7 @@
 				CC42FC3B2110546400E80907 /* DashboardMedia.xcassets */,
 				CC42FC3D211066EB00E80907 /* TopHighlightViewModel.swift */,
 				CC42FC3F211079DC00E80907 /* TopHighlightsSectionView.swift */,
+				CC42FC43211197DB00E80907 /* TopHighlightsSectionViewModel.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -440,6 +443,7 @@
 				CC281D8B20E284D700CE2673 /* PaymentsInteractor.swift in Sources */,
 				CC42FC2E210B5DA300E80907 /* DashboardPayment.swift in Sources */,
 				CC42FC26210B12B800E80907 /* DashboardPresenter.swift in Sources */,
+				CC42FC44211197DB00E80907 /* TopHighlightsSectionViewModel.swift in Sources */,
 				3E3FE54020B00CAA000C3783 /* WireframeType.swift in Sources */,
 				CC42FC40211079DC00E80907 /* TopHighlightsSectionView.swift in Sources */,
 				CC281D9320E524C300CE2673 /* PaymentsPresenter.swift in Sources */,

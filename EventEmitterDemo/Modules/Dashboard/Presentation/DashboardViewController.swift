@@ -12,18 +12,38 @@ import UIKit
 class DashboardViewController: UIViewController {
     
     @IBOutlet weak var highlights: TopHighlightsSectionView!
+    
     var presenter: DashboardPresenter?
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
         
+        // Setup Expand-collapse GR
+        setupSectionTap()
+        
         // Update Highlighs UIStackView Section
-        presenter?.getHighlights() { [weak self] highlightsViewModels in
+        presenter?.getHighlights() { [weak self] viewModel in
             
-            if let highlightsViewModels = highlightsViewModels {
-                self?.highlights.addSubviews(with: highlightsViewModels)
+            if let viewModel = viewModel {
+                self?.highlights.updateSectionView(with: viewModel)
             }
+        }
+    }
+    
+    // MARK: Expand-collapse
+    func setupSectionTap() {
+        
+        view.gestureRecognizers = nil
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(highlightsTapped))
+        highlights.addGestureRecognizer(tapGestureRecognizer)
+        highlights.isUserInteractionEnabled = true
+    }
+    
+    @IBAction func highlightsTapped(sender: UIGestureRecognizer) {
+        
+        if let viewModel = presenter?.expandCollapseTopHighlights() {
+            self.highlights.updateSectionView(with: viewModel)
         }
     }
 }

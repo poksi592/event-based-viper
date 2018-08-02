@@ -12,36 +12,39 @@ import UIKit
 class TopHighlightsSectionView: UIStackView {
     
     var highlighViews: [WeakContainer<TopHighlightView>] = []
-    var isExpanded = false
     
     override func awakeFromNib() {
         
         spacing = 6.0
-
-        gestureRecognizers = nil
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tapped))
-        addGestureRecognizer(tapGestureRecognizer)
-        isUserInteractionEnabled = true
     }
     
-    func addSubviews(with models: [TopHighlightViewModel]) {
+    func updateSectionView(with model: TopHighlightsSectionViewModel) {
         
-        models.forEach { [weak self] viewModel in
+        if highlighViews.isEmpty {
+
+            model.topHighlightViewModels.enumerated().forEach { [weak self] (index, viewModel) in
             
-            let topHighlightView = TopHighlightView.instantiateFromNib() as! TopHighlightView
-            topHighlightView.setup(with: viewModel)
-            self?.addArrangedSubview(topHighlightView)
-            self?.highlighViews.append(WeakContainer(value: topHighlightView))
+                let topHighlightView = TopHighlightView.instantiateFromNib() as! TopHighlightView
+                topHighlightView.setup(with: viewModel)
+                self?.addArrangedSubview(topHighlightView)
+                self?.highlighViews.append(WeakContainer(value: topHighlightView))
+            }
         }
+        else {
+            model.topHighlightViewModels.enumerated().forEach { [weak self] (index, viewModel) in
+
+                self?.highlighViews[index].value?.setup(with: viewModel)
+            }
+        }
+        resizeView(isExpanded: model.isExpanded)
     }
     
-    @objc func tapped(sender: UITapGestureRecognizer) {
+    func resizeView(isExpanded: Bool) {
         
         highlighViews.forEach { view  in
             
             view.value?.from.isHidden = isExpanded
             view.value?.text.isHidden = isExpanded
         }
-        isExpanded = !isExpanded
     }
 }

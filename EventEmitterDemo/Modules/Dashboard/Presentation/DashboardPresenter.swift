@@ -15,6 +15,8 @@ class DashboardPresenter: ModuleRoutable {
     private var parameters: ModuleParameters?
     private var callback: ModuleCallback?
     
+    var topHighlightsSectionViewModel: TopHighlightsSectionViewModel?
+    
     static func routable() -> ModuleRoutable {
         return self.init()
     }
@@ -34,14 +36,24 @@ class DashboardPresenter: ModuleRoutable {
         }
     }
     
-    func getHighlights(completion: @escaping ([TopHighlightViewModel]?) -> Void) {
-        
-        print("gadvaaa")
-        interactor.getTopHighlights { (topHighlights, error) in
+    func getHighlights(completion: @escaping (TopHighlightsSectionViewModel?) -> Void) {
+
+        interactor.getTopHighlights { [weak self] (topHighlights, error) in
 
             // We shall not tackle error handling here
             let topHighlightsViewModels = topHighlights?.compactMap { TopHighlightViewModel(model: $0) }
-            completion(topHighlightsViewModels)
+            if let topHighlightsViewModels = topHighlightsViewModels {
+                
+                self?.topHighlightsSectionViewModel = TopHighlightsSectionViewModel(topHighlightViewModels: topHighlightsViewModels)
+                completion(self?.topHighlightsSectionViewModel)
+            }
         }
+    }
+    
+    func expandCollapseTopHighlights() -> TopHighlightsSectionViewModel? {
+        
+        guard let viewModel = topHighlightsSectionViewModel else { return nil }
+        viewModel.isExpanded = !viewModel.isExpanded
+        return viewModel
     }
 }

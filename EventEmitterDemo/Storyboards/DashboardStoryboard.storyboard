@@ -38,6 +38,7 @@
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="oMz-MD-v8P" customClass="TopHighlightsSectionView" customModule="EventEmitterDemo" customModuleProvider="target">
                                 <rect key="frame" x="15" y="69" width="345" height="249"/>
+                                <gestureRecognizers/>
                             </stackView>
                             <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3dw-7q-vin">
                                 <rect key="frame" x="15" y="367" width="345" height="300"/>
