@@ -16,6 +16,7 @@ class DashboardPresenter: ModuleRoutable {
     private var callback: ModuleCallback?
     
     var topHighlightsSectionViewModel: TopHighlightsSectionViewModel?
+    var dashboardPaymentViewModels: [DashboardPaymentViewModel]?
     
     static func routable() -> ModuleRoutable {
         return self.init()
@@ -36,6 +37,7 @@ class DashboardPresenter: ModuleRoutable {
         }
     }
     
+    // MARK: Highlights
     func getHighlights(completion: @escaping (TopHighlightsSectionViewModel?) -> Void) {
 
         interactor.getTopHighlights { [weak self] (topHighlights, error) in
@@ -55,5 +57,17 @@ class DashboardPresenter: ModuleRoutable {
         guard let viewModel = topHighlightsSectionViewModel else { return nil }
         viewModel.isExpanded = !viewModel.isExpanded
         return viewModel
+    }
+    
+    // MARK: Last payments
+    
+    func getLastPayments(completion: @escaping () -> Void) {
+        
+        interactor.getLast10Payments { [weak self]  (payments, error) in
+            
+            // We shall not tackle error handling here
+            self?.dashboardPaymentViewModels = payments?.compactMap { DashboardPaymentViewModel(model: $0) }
+            completion()
+        }
     }
 }

@@ -47,6 +47,8 @@
 		CC42FC40211079DC00E80907 /* TopHighlightsSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC42FC3F211079DC00E80907 /* TopHighlightsSectionView.swift */; };
 		CC42FC4221108EC800E80907 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC42FC4121108EC800E80907 /* UIViewExtensions.swift */; };
 		CC42FC44211197DB00E80907 /* TopHighlightsSectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC42FC43211197DB00E80907 /* TopHighlightsSectionViewModel.swift */; };
+		CC42FC462112EC5B00E80907 /* DashboardPaymentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC42FC452112EC5B00E80907 /* DashboardPaymentViewModel.swift */; };
+		CC42FC482112FC2500E80907 /* DashboardPaymentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC42FC472112FC2500E80907 /* DashboardPaymentCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +115,8 @@
 		CC42FC3F211079DC00E80907 /* TopHighlightsSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopHighlightsSectionView.swift; sourceTree = "<group>"; };
 		CC42FC4121108EC800E80907 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		CC42FC43211197DB00E80907 /* TopHighlightsSectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopHighlightsSectionViewModel.swift; sourceTree = "<group>"; };
+		CC42FC452112EC5B00E80907 /* DashboardPaymentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardPaymentViewModel.swift; sourceTree = "<group>"; };
+		CC42FC472112FC2500E80907 /* DashboardPaymentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardPaymentCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -271,6 +275,8 @@
 				CC42FC3D211066EB00E80907 /* TopHighlightViewModel.swift */,
 				CC42FC3F211079DC00E80907 /* TopHighlightsSectionView.swift */,
 				CC42FC43211197DB00E80907 /* TopHighlightsSectionViewModel.swift */,
+				CC42FC452112EC5B00E80907 /* DashboardPaymentViewModel.swift */,
+				CC42FC472112FC2500E80907 /* DashboardPaymentCell.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -435,8 +441,10 @@
 				CC42FC28210B13A500E80907 /* DashboardWireframe.swift in Sources */,
 				3E3FE58320B45399000C3783 /* VCExtensions.swift in Sources */,
 				3E3FE57F20B44DF2000C3783 /* PaymentsViewController.swift in Sources */,
+				CC42FC482112FC2500E80907 /* DashboardPaymentCell.swift in Sources */,
 				CC42FC2A210B15E300E80907 /* DashboardInteractor.swift in Sources */,
 				CC42FC24210B123500E80907 /* LastPaymentsViewController.swift in Sources */,
+				CC42FC462112EC5B00E80907 /* DashboardPaymentViewModel.swift in Sources */,
 				3E6F83E7206958F7004AF262 /* NetworkService.swift in Sources */,
 				CC42FC20210B11DA00E80907 /* DashboardModule.swift in Sources */,
 				3E5987722061879F0024F7F7 /* ViewController.swift in Sources */,

@@ -46,4 +46,19 @@ class DashboardViewController: UIViewController {
             self.highlights.updateSectionView(with: viewModel)
         }
     }
+    
+    // MARK Container View instantiation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "LastPaymentsSegue",
+            let lastPaymentsViewController = segue.destination as? LastPaymentsViewController {
+            
+            lastPaymentsViewController.presenter = self.presenter
+        }
+    }
 }
+
+
+
+

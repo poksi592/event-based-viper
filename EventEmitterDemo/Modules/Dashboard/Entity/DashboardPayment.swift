@@ -11,7 +11,7 @@ import Foundation
 struct DashboardPayment: Codable {
     
     let id: Int
-    let date: Int
+    let date: Double
     let amount: Double
     let accountNo: String
     let recipientAccountNo: String
