@@ -26,4 +26,17 @@ class DashboardWireframe: WireframeType {
             dashboardViewController.presenter = presenter
         }
     }
+    
+    func presentViewController<VC: RoutableViewControllerType>(ofType: VC.Type,
+                                                               presenter: DashboardPresenter,
+                                                               parameters: ModuleParameters?) {
+        
+        setPresentationMode(from: parameters)
+        if let viewController = viewController(from: parameters) {
+            
+            present(viewController: viewController)
+            guard let specificViewController = viewController as? VC else { return }
+            specificViewController.presenter = presenter
+        }
+    }
 }

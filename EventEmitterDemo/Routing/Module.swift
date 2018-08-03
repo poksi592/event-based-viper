@@ -161,7 +161,7 @@ public extension ModuleType {
  Protocol should be adopted by the classes, which are routed directly by a `Module` and
  be registered in it.
  */
-public protocol ModuleRoutable {
+public protocol ModuleRoutable: class {
 
     /**
      Every class which wants to be routed by `Module` needs to identify itself with a certain path/method
@@ -185,6 +185,11 @@ public protocol ModuleRoutable {
 public class StoryboardIdentifiableViewController: UIViewController {
     
     var storyboardId: String? = nil
+}
+
+public protocol RoutableViewControllerType: class {
+    
+    var presenter: ModuleRoutable? { get set }
 }
 
 

@@ -9,11 +9,12 @@
 import Foundation
 import UIKit
 
-class DashboardViewController: UIViewController {
-    
+class DashboardViewController: UIViewController, RoutableViewControllerType {
+
     @IBOutlet weak var highlights: TopHighlightsSectionView!
     
-    var presenter: DashboardPresenter?
+    var presenter: ModuleRoutable?
+    private weak var dashboardPresenter: DashboardPresenter?
     
     override func viewDidLoad() {
         
@@ -23,10 +24,13 @@ class DashboardViewController: UIViewController {
         setupSectionTap()
         
         // Update Highlighs UIStackView Section
-        presenter?.getHighlights() { [weak self] viewModel in
+        if let presenter = presenter as? DashboardPresenter {
             
-            if let viewModel = viewModel {
-                self?.highlights.updateSectionView(with: viewModel)
+            presenter.getHighlights() { [weak self] viewModel in
+                
+                if let viewModel = viewModel {
+                    self?.highlights.updateSectionView(with: viewModel)
+                }
             }
         }
     }
@@ -42,12 +46,15 @@ class DashboardViewController: UIViewController {
     
     @IBAction func highlightsTapped(sender: UIGestureRecognizer) {
         
-        if let viewModel = presenter?.expandCollapseTopHighlights() {
+        
+        if let presenter = presenter as? DashboardPresenter,
+            let viewModel = presenter.expandCollapseTopHighlights() {
+            
             self.highlights.updateSectionView(with: viewModel)
         }
     }
     
-    // MARK Container View instantiation
+    // MARK Managing transitions
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -55,6 +62,11 @@ class DashboardViewController: UIViewController {
             let lastPaymentsViewController = segue.destination as? LastPaymentsViewController {
             
             lastPaymentsViewController.presenter = self.presenter
+        }
+        else if segue.identifier == "PaymentDetailSegue",
+            let paymentDetailsViewController = segue.destination as? PaymentDetailViewController {
+            
+            paymentDetailsViewController.presenter = self.presenter
         }
     }
 }

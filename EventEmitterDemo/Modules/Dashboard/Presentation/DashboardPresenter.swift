@@ -15,8 +15,9 @@ class DashboardPresenter: ModuleRoutable {
     private var parameters: ModuleParameters?
     private var callback: ModuleCallback?
     
-    var topHighlightsSectionViewModel: TopHighlightsSectionViewModel?
-    var dashboardPaymentViewModels: [DashboardPaymentViewModel]?
+    private(set) var topHighlightsSectionViewModel: TopHighlightsSectionViewModel?
+    private(set) var dashboardPaymentViewModels: [DashboardPaymentViewModel]?
+    private(set) var lastSelectedPayment: Int?
     
     static func routable() -> ModuleRoutable {
         return self.init()
@@ -69,5 +70,14 @@ class DashboardPresenter: ModuleRoutable {
             self?.dashboardPaymentViewModels = payments?.compactMap { DashboardPaymentViewModel(model: $0) }
             completion()
         }
+    }
+    
+    func selectedPayment(index: Int) {
+
+        lastSelectedPayment = index
+        wireframe.presentViewController(ofType: PaymentDetailViewController.self,
+                                        presenter: self,
+                                        parameters: ["presentationMode": "navigationStack",
+                                                     "viewController": "PaymentDetailViewControllerId"])
     }
 }

@@ -49,6 +49,7 @@
 		CC42FC44211197DB00E80907 /* TopHighlightsSectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC42FC43211197DB00E80907 /* TopHighlightsSectionViewModel.swift */; };
 		CC42FC462112EC5B00E80907 /* DashboardPaymentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC42FC452112EC5B00E80907 /* DashboardPaymentViewModel.swift */; };
 		CC42FC482112FC2500E80907 /* DashboardPaymentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC42FC472112FC2500E80907 /* DashboardPaymentCell.swift */; };
+		CC42FC4A21144ECE00E80907 /* PaymentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC42FC4921144ECE00E80907 /* PaymentDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +118,7 @@
 		CC42FC43211197DB00E80907 /* TopHighlightsSectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopHighlightsSectionViewModel.swift; sourceTree = "<group>"; };
 		CC42FC452112EC5B00E80907 /* DashboardPaymentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardPaymentViewModel.swift; sourceTree = "<group>"; };
 		CC42FC472112FC2500E80907 /* DashboardPaymentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardPaymentCell.swift; sourceTree = "<group>"; };
+		CC42FC4921144ECE00E80907 /* PaymentDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -277,6 +279,7 @@
 				CC42FC43211197DB00E80907 /* TopHighlightsSectionViewModel.swift */,
 				CC42FC452112EC5B00E80907 /* DashboardPaymentViewModel.swift */,
 				CC42FC472112FC2500E80907 /* DashboardPaymentCell.swift */,
+				CC42FC4921144ECE00E80907 /* PaymentDetailViewController.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -438,6 +441,7 @@
 				CC42FC22210B11ED00E80907 /* DashboardViewController.swift in Sources */,
 				3E3FE53B20A9BADC000C3783 /* ApplicationRouter.swift in Sources */,
 				3E6F83E32066AA6E004AF262 /* Bundle.swift in Sources */,
+				CC42FC4A21144ECE00E80907 /* PaymentDetailViewController.swift in Sources */,
 				CC42FC28210B13A500E80907 /* DashboardWireframe.swift in Sources */,
 				3E3FE58320B45399000C3783 /* VCExtensions.swift in Sources */,
 				3E3FE57F20B44DF2000C3783 /* PaymentsViewController.swift in Sources */,
