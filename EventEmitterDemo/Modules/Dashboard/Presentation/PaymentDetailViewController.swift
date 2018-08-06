@@ -19,7 +19,7 @@ class PaymentDetailViewController: UIViewController, RoutableViewControllerType 
     @IBOutlet weak var recipientName: UILabel!
     @IBOutlet weak var text: UILabel!
     
-    weak var presenter: ModuleRoutable?
+    weak var presenter: ModulePresentable?
     private weak var dashboardPresenter: DashboardPresenter?
     
     override func viewDidLoad() {

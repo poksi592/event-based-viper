@@ -8,12 +8,12 @@
 
 import Foundation
 
-class DashboardPresenter: ModuleRoutable {
+class DashboardPresenter: ModuleRoutable, ModulePresentable {
     
-    lazy private var wireframe = DashboardWireframe()
-    lazy private var interactor = DashboardInteractor()
-    private var parameters: ModuleParameters?
-    private var callback: ModuleCallback?
+    var wireframe: WireframeType = DashboardWireframe()
+    var interactor = DashboardInteractor()
+    private(set) var parameters: ModuleParameters?
+    private(set) var callback: ModuleCallback?
     
     private(set) var topHighlightsSectionViewModel: TopHighlightsSectionViewModel?
     private(set) var dashboardPaymentViewModels: [DashboardPaymentViewModel]?
@@ -33,8 +33,9 @@ class DashboardPresenter: ModuleRoutable {
         self.callback = callback
         
         if path == "/present" {
-            wireframe.presentDashboardViewController(with: self,
-                                                     parameters: parameters)
+            wireframe.presentViewController(ofType: DashboardViewController.self,
+                                            presenter: self,
+                                            parameters: parameters)
         }
     }
     

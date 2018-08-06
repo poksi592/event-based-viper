@@ -13,7 +13,7 @@ class DashboardViewController: UIViewController, RoutableViewControllerType {
 
     @IBOutlet weak var highlights: TopHighlightsSectionView!
     
-    var presenter: ModuleRoutable?
+    var presenter: ModulePresentable?
     private weak var dashboardPresenter: DashboardPresenter?
     
     override func viewDidLoad() {

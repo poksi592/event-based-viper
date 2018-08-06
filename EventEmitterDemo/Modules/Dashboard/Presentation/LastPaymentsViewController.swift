@@ -11,7 +11,7 @@ import UIKit
 
 class LastPaymentsViewController: UITableViewController, RoutableViewControllerType {
     
-    weak var presenter: ModuleRoutable?
+    weak var presenter: ModulePresentable?
     private weak var dashboardPresenter: DashboardPresenter?
     
     override func viewDidLoad() {

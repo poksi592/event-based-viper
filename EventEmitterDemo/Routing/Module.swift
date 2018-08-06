@@ -189,7 +189,11 @@ public class StoryboardIdentifiableViewController: UIViewController {
 
 public protocol RoutableViewControllerType: class {
     
-    var presenter: ModuleRoutable? { get set }
+    var presenter: ModulePresentable? { get set }
+}
+
+public protocol ModulePresentable: class {
+    
 }
 
 

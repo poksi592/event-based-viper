@@ -14,29 +14,4 @@ class DashboardWireframe: WireframeType {
     lazy var storyboard: UIStoryboard = UIStoryboard(name: "DashboardStoryboard", bundle: nil)
     var presentedViewControllers = [WeakContainer<UIViewController>]()
     var presentationMode: ModulePresentationMode = .none
-    
-    func presentDashboardViewController(with presenter: DashboardPresenter,
-                                        parameters: ModuleParameters?) {
-        
-        setPresentationMode(from: parameters)
-        if let viewController = viewController(from: parameters) {
-            
-            present(viewController: viewController)
-            guard let dashboardViewController = viewController as? DashboardViewController else { return }
-            dashboardViewController.presenter = presenter
-        }
-    }
-    
-    func presentViewController<VC: RoutableViewControllerType>(ofType: VC.Type,
-                                                               presenter: DashboardPresenter,
-                                                               parameters: ModuleParameters?) {
-        
-        setPresentationMode(from: parameters)
-        if let viewController = viewController(from: parameters) {
-            
-            present(viewController: viewController)
-            guard let specificViewController = viewController as? VC else { return }
-            specificViewController.presenter = presenter
-        }
-    }
 }
