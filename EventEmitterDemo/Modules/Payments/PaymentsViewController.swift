@@ -9,15 +9,17 @@
 import Foundation
 import UIKit
 
-class PaymentsViewController: StoryboardIdentifiableViewController {
-    
-    var presenter: PaymentsPresenter?
+class PaymentsViewController: UITableViewController, RoutableViewControllerType {
+
+    var presenter: ModulePresentable?
     
     @IBOutlet weak var amountTextField: UITextField!
     @IBOutlet weak var payButton: UIButton!
     
     @IBAction private func payButtonAction(_ sender: UIButton) {
         
-        presenter?.pay(amount: amountTextField.text)
+        if let presenter = presenter as? PaymentsPresenter {
+            presenter.pay(amount: amountTextField.text)
+        }
     }
 }

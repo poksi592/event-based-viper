@@ -187,7 +187,7 @@ public class StoryboardIdentifiableViewController: UIViewController {
     var storyboardId: String? = nil
 }
 
-public protocol RoutableViewControllerType: class {
+public protocol RoutableViewControllerType where Self: UIViewController {
     
     var presenter: ModulePresentable? { get set }
 }

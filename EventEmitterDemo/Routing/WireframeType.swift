@@ -60,10 +60,12 @@ public protocol WireframeType: class {
         - ofType: RoutableViewControllerType.self but with concrete type for VC you need to instantiate
         - presenter: Concrete presenter, which conforms to ModulePresentable
         - parameters: ModuleParameters, from presenter
+     
+     - returns: RoutableViewControllerType View Controller if instantiation was successful
      */
     func presentViewController<VC: RoutableViewControllerType>(ofType: VC.Type,
                                                                presenter: ModulePresentable,
-                                                               parameters: ModuleParameters?)
+                                                               parameters: ModuleParameters?) -> RoutableViewControllerType?
     
     /**
      Function with generic set of parameters. Should be called from `StoryboardModuleType`.
@@ -204,16 +206,20 @@ extension WireframeType {
         }
     }
     
+    @discardableResult
     func presentViewController<VC: RoutableViewControllerType>(ofType: VC.Type,
                                                                presenter: ModulePresentable,
-                                                               parameters: ModuleParameters?) {
+                                                               parameters: ModuleParameters?) -> RoutableViewControllerType? {
         
         setPresentationMode(from: parameters)
         if let viewController = viewController(from: parameters) {
             
             present(viewController: viewController)
-            guard let specificViewController = viewController as? VC else { return }
-            specificViewController.presenter = presenter
+            guard let specificViewController = viewController as? VC else { return nil }
+            var varSpecificViewController = specificViewController
+            varSpecificViewController.presenter = presenter
+            return varSpecificViewController
         }
+        return nil
     }
 }

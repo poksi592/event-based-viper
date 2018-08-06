@@ -8,7 +8,7 @@
 
 import Foundation
 
-class PaymentsPresenter: ModuleRoutable {
+class PaymentsPresenter: ModuleRoutable, ModulePresentable {
     
     lazy private var wireframe = PaymentWireframe()
     lazy private var interactor = PaymentsInteractor()
@@ -27,7 +27,10 @@ class PaymentsPresenter: ModuleRoutable {
         
         self.parameters = parameters
         self.callback = callback
-        wireframe.presentPayViewController(with: self, parameters: parameters)
+        
+        wireframe.presentViewController(ofType: PaymentsViewController.self,
+                                        presenter: self,
+                                        parameters: parameters)
     }
     
     func pay(amount: String?) {

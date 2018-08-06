@@ -16,14 +16,14 @@ class PaymentWireframe: WireframeType {
     var presentedViewControllers = [WeakContainer<UIViewController>]()
     var presentationMode: ModulePresentationMode = .none
     
-    func presentPayViewController(with presenter: PaymentsPresenter, parameters: ModuleParameters?) {
-        
-        setPresentationMode(from: parameters)
-        if let viewController = viewController(from: parameters) {
-            
-            present(viewController: viewController)
-            guard let paymentsViewController = viewController as? PaymentsViewController else { return }
-            paymentsViewController.presenter = presenter
-        }
-    }
+//    func presentPayViewController(with presenter: PaymentsPresenter, parameters: ModuleParameters?) {
+//
+//        setPresentationMode(from: parameters)
+//        if let viewController = viewController(from: parameters) {
+//
+//            present(viewController: viewController)
+//            guard let paymentsViewController = viewController as? PaymentsViewController else { return }
+//            paymentsViewController.presenter = presenter
+//        }
+//    }
 }

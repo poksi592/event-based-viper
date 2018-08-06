@@ -64,6 +64,7 @@
 		CC42FC6621186E9B00E80907 /* TopHighlightsSectionViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC42FC6521186E9B00E80907 /* TopHighlightsSectionViewModelTests.swift */; };
 		CC42FC68211885E500E80907 /* DashboardPaymentViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC42FC67211885E500E80907 /* DashboardPaymentViewModelTests.swift */; };
 		CC42FC6A2118889300E80907 /* DashboardPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC42FC692118889300E80907 /* DashboardPresenterTests.swift */; };
+		CC42FC6C2118A35300E80907 /* DashboardViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC42FC6B2118A35300E80907 /* DashboardViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -147,6 +148,7 @@
 		CC42FC6521186E9B00E80907 /* TopHighlightsSectionViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopHighlightsSectionViewModelTests.swift; sourceTree = "<group>"; };
 		CC42FC67211885E500E80907 /* DashboardPaymentViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardPaymentViewModelTests.swift; sourceTree = "<group>"; };
 		CC42FC692118889300E80907 /* DashboardPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardPresenterTests.swift; sourceTree = "<group>"; };
+		CC42FC6B2118A35300E80907 /* DashboardViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -367,6 +369,7 @@
 				CC42FC6521186E9B00E80907 /* TopHighlightsSectionViewModelTests.swift */,
 				CC42FC67211885E500E80907 /* DashboardPaymentViewModelTests.swift */,
 				CC42FC692118889300E80907 /* DashboardPresenterTests.swift */,
+				CC42FC6B2118A35300E80907 /* DashboardViewControllerTests.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -563,6 +566,7 @@
 				CC42FC68211885E500E80907 /* DashboardPaymentViewModelTests.swift in Sources */,
 				3E5987852061879F0024F7F7 /* APIClientArchitectureDemoTests.swift in Sources */,
 				CC42FC4F211845D200E80907 /* DashboardInteractorTests.swift in Sources */,
+				CC42FC6C2118A35300E80907 /* DashboardViewControllerTests.swift in Sources */,
 				CC42FC6A2118889300E80907 /* DashboardPresenterTests.swift in Sources */,
 				CC42FC5321184D1400E80907 /* DashboardPaymentTests.swift in Sources */,
 			);
