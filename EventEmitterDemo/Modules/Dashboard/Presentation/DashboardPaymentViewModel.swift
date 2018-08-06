@@ -1,5 +1,5 @@
 //
-//  DashboardPaymentViewModell.swift
+//  DashboardPaymentViewModel.swift
 //  EventEmitterDemo
 //
 //  Created by Mladen Despotovic on 02.08.18.
@@ -29,8 +29,11 @@ struct DashboardPaymentViewModel {
         dateFormatter.locale = Locale.current
         self.date = dateFormatter.string(from: date)
 
-        self.amount = NumberFormatter.localizedString(from: NSNumber.init(value: model.amount),
-                                                      number: .currency)
+        let formatter = NumberFormatter()
+        formatter.currencySymbol = "€"
+        formatter.numberStyle = .currency
+        self.amount = formatter.string(from: NSNumber(value: model.amount)) ?? ""
+
         self.accountNo = model.accountNo
         self.recipientAccountNo = model.recipientAccountNo
         self.recipientName = model.recipientName

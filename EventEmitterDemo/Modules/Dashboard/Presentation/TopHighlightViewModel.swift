@@ -24,8 +24,7 @@ struct TopHighlightViewModel {
         let formatter = NumberFormatter()
         formatter.currencySymbol = "€"
         formatter.numberStyle = .currency
-        self.amount = NumberFormatter.localizedString(from: NSNumber.init(value: model.amount),
-                                                      number: .currency)
+        self.amount = formatter.string(from: NSNumber(value: model.amount)) ?? ""
         
         self.from = model.from
         self.text = model.text

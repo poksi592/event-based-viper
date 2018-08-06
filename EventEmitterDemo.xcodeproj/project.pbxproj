@@ -60,6 +60,9 @@
 		CC42FC5D21185F2900E80907 /* Full2TopHighlights.json in Resources */ = {isa = PBXBuildFile; fileRef = CC42FC5C21185F2900E80907 /* Full2TopHighlights.json */; };
 		CC42FC5F21185F6000E80907 /* BadJsonTopHighlights.json in Resources */ = {isa = PBXBuildFile; fileRef = CC42FC5E21185F6000E80907 /* BadJsonTopHighlights.json */; };
 		CC42FC6121185F9A00E80907 /* TypeMissingJsonTopHighlights.json in Resources */ = {isa = PBXBuildFile; fileRef = CC42FC6021185F9A00E80907 /* TypeMissingJsonTopHighlights.json */; };
+		CC42FC642118695F00E80907 /* TopHighlightViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC42FC632118695F00E80907 /* TopHighlightViewModelTests.swift */; };
+		CC42FC6621186E9B00E80907 /* TopHighlightsSectionViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC42FC6521186E9B00E80907 /* TopHighlightsSectionViewModelTests.swift */; };
+		CC42FC68211885E500E80907 /* DashboardPaymentViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC42FC67211885E500E80907 /* DashboardPaymentViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,6 +142,9 @@
 		CC42FC5C21185F2900E80907 /* Full2TopHighlights.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Full2TopHighlights.json; sourceTree = "<group>"; };
 		CC42FC5E21185F6000E80907 /* BadJsonTopHighlights.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BadJsonTopHighlights.json; sourceTree = "<group>"; };
 		CC42FC6021185F9A00E80907 /* TypeMissingJsonTopHighlights.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TypeMissingJsonTopHighlights.json; sourceTree = "<group>"; };
+		CC42FC632118695F00E80907 /* TopHighlightViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopHighlightViewModelTests.swift; sourceTree = "<group>"; };
+		CC42FC6521186E9B00E80907 /* TopHighlightsSectionViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopHighlightsSectionViewModelTests.swift; sourceTree = "<group>"; };
+		CC42FC67211885E500E80907 /* DashboardPaymentViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardPaymentViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -296,8 +302,8 @@
 				CC42FC35210F56F100E80907 /* TopHighlightView.xib */,
 				CC42FC37210F570800E80907 /* TopHighlightView.swift */,
 				CC42FC3B2110546400E80907 /* DashboardMedia.xcassets */,
-				CC42FC3D211066EB00E80907 /* TopHighlightViewModel.swift */,
 				CC42FC3F211079DC00E80907 /* TopHighlightsSectionView.swift */,
+				CC42FC3D211066EB00E80907 /* TopHighlightViewModel.swift */,
 				CC42FC43211197DB00E80907 /* TopHighlightsSectionViewModel.swift */,
 				CC42FC452112EC5B00E80907 /* DashboardPaymentViewModel.swift */,
 				CC42FC472112FC2500E80907 /* DashboardPaymentCell.swift */,
@@ -329,6 +335,7 @@
 		CC42FC4C211845AB00E80907 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
+				CC42FC62211861AE00E80907 /* Presentation */,
 				CC42FC4D211845B200E80907 /* Entity */,
 				CC42FC5021184B8E00E80907 /* DashboardModuleTests.swift */,
 			);
@@ -349,6 +356,16 @@
 				CC42FC6021185F9A00E80907 /* TypeMissingJsonTopHighlights.json */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		CC42FC62211861AE00E80907 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				CC42FC632118695F00E80907 /* TopHighlightViewModelTests.swift */,
+				CC42FC6521186E9B00E80907 /* TopHighlightsSectionViewModelTests.swift */,
+				CC42FC67211885E500E80907 /* DashboardPaymentViewModelTests.swift */,
+			);
+			path = Presentation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -536,8 +553,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC42FC642118695F00E80907 /* TopHighlightViewModelTests.swift in Sources */,
+				CC42FC6621186E9B00E80907 /* TopHighlightsSectionViewModelTests.swift in Sources */,
 				CC42FC5121184B8E00E80907 /* DashboardModuleTests.swift in Sources */,
 				CC42FC5B21185EC600E80907 /* TopHighlightTests.swift in Sources */,
+				CC42FC68211885E500E80907 /* DashboardPaymentViewModelTests.swift in Sources */,
 				3E5987852061879F0024F7F7 /* APIClientArchitectureDemoTests.swift in Sources */,
 				CC42FC4F211845D200E80907 /* DashboardInteractorTests.swift in Sources */,
 				CC42FC5321184D1400E80907 /* DashboardPaymentTests.swift in Sources */,
