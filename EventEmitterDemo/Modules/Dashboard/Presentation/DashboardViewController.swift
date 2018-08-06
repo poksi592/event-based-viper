@@ -46,7 +46,6 @@ class DashboardViewController: UIViewController, RoutableViewControllerType {
     
     @IBAction func highlightsTapped(sender: UIGestureRecognizer) {
         
-        
         if let presenter = presenter as? DashboardPresenter,
             let viewModel = presenter.expandCollapseTopHighlights() {
             

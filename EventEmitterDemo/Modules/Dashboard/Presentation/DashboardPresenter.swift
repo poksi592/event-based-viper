@@ -16,7 +16,7 @@ class DashboardPresenter: ModuleRoutable, ModulePresentable {
     private(set) var callback: ModuleCallback?
     
     private(set) var topHighlightsSectionViewModel: TopHighlightsSectionViewModel?
-    private(set) var dashboardPaymentViewModels: [DashboardPaymentViewModel]?
+    var dashboardPaymentViewModels: [DashboardPaymentViewModel]?
     private(set) var lastSelectedPayment: Int?
     
     static func routable() -> ModuleRoutable {
@@ -33,9 +33,9 @@ class DashboardPresenter: ModuleRoutable, ModulePresentable {
         self.callback = callback
         
         if path == "/present" {
-            wireframe.presentViewController(ofType: DashboardViewController.self,
-                                            presenter: self,
-                                            parameters: parameters)
+            let _ = wireframe.presentViewController(ofType: DashboardViewController.self,
+                                                    presenter: self,
+                                                    parameters: parameters)
         }
     }
     
@@ -73,12 +73,13 @@ class DashboardPresenter: ModuleRoutable, ModulePresentable {
         }
     }
     
-    func selectedPayment(index: Int) {
+    func selectedPayment(index: Int) -> PaymentDetailViewController?  {
 
         lastSelectedPayment = index
-        wireframe.presentViewController(ofType: PaymentDetailViewController.self,
-                                        presenter: self,
-                                        parameters: ["presentationMode": "navigationStack",
-                                                     "viewController": "PaymentDetailViewControllerId"])
+        let viewController = wireframe.presentViewController(ofType: PaymentDetailViewController.self,
+                                                             presenter: self,
+                                                             parameters: ["presentationMode": "navigationStack",
+                                                                          "viewController": "PaymentDetailViewControllerId"])
+        return viewController as? PaymentDetailViewController
     }
 }

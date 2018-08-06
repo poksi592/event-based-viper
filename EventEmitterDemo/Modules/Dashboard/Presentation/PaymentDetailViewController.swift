@@ -11,13 +11,13 @@ import UIKit
 
 class PaymentDetailViewController: UIViewController, RoutableViewControllerType {
     
-    @IBOutlet weak var id: UILabel!
-    @IBOutlet weak var date: UILabel!
-    @IBOutlet weak var amount: UILabel!
-    @IBOutlet weak var accountNo: UILabel!
-    @IBOutlet weak var recipientAccountNo: UILabel!
-    @IBOutlet weak var recipientName: UILabel!
-    @IBOutlet weak var text: UILabel!
+    @IBOutlet var id: UILabel!
+    @IBOutlet var date: UILabel!
+    @IBOutlet var amount: UILabel!
+    @IBOutlet var accountNo: UILabel!
+    @IBOutlet var recipientAccountNo: UILabel!
+    @IBOutlet var recipientName: UILabel!
+    @IBOutlet var text: UILabel!
     
     weak var presenter: ModulePresentable?
     private weak var dashboardPresenter: DashboardPresenter?
@@ -26,7 +26,14 @@ class PaymentDetailViewController: UIViewController, RoutableViewControllerType 
         
         super.viewDidLoad()
         dashboardPresenter = presenter as? DashboardPresenter
+       // setup()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        dashboardPresenter = presenter as? DashboardPresenter
         setup()
+        super.viewWillAppear(animated)
     }
     
     func setup() {

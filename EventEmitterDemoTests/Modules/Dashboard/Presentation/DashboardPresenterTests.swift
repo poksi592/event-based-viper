@@ -213,9 +213,10 @@ class MockDashboardWireframe: WireframeType {
     
     func presentViewController<VC>(ofType: VC.Type,
                                             presenter: ModulePresentable,
-                                            parameters: ModuleParameters?) where VC : RoutableViewControllerType {
+                                            parameters: ModuleParameters?) -> RoutableViewControllerType? {
         
         presentViewControllerIsCalled = true
+        return nil
     }
 }
 
