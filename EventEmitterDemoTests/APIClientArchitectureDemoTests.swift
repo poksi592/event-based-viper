@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import APIClientArchitectureDemo
+@testable import EventEmitterDemo
 
 class APIClientArchitectureDemoTests: XCTestCase {
     

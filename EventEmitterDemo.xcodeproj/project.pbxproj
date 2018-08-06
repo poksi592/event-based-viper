@@ -50,6 +50,16 @@
 		CC42FC462112EC5B00E80907 /* DashboardPaymentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC42FC452112EC5B00E80907 /* DashboardPaymentViewModel.swift */; };
 		CC42FC482112FC2500E80907 /* DashboardPaymentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC42FC472112FC2500E80907 /* DashboardPaymentCell.swift */; };
 		CC42FC4A21144ECE00E80907 /* PaymentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC42FC4921144ECE00E80907 /* PaymentDetailViewController.swift */; };
+		CC42FC4F211845D200E80907 /* DashboardInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC42FC4E211845D200E80907 /* DashboardInteractorTests.swift */; };
+		CC42FC5121184B8E00E80907 /* DashboardModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC42FC5021184B8E00E80907 /* DashboardModuleTests.swift */; };
+		CC42FC5321184D1400E80907 /* DashboardPaymentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC42FC5221184D1400E80907 /* DashboardPaymentTests.swift */; };
+		CC42FC5521184D8D00E80907 /* Full3Payments.json in Resources */ = {isa = PBXBuildFile; fileRef = CC42FC5421184D8D00E80907 /* Full3Payments.json */; };
+		CC42FC5721184DDA00E80907 /* BadJsonPayment.json in Resources */ = {isa = PBXBuildFile; fileRef = CC42FC5621184DDA00E80907 /* BadJsonPayment.json */; };
+		CC42FC5921184E3600E80907 /* IDMissingJsonPayment.json in Resources */ = {isa = PBXBuildFile; fileRef = CC42FC5821184E3600E80907 /* IDMissingJsonPayment.json */; };
+		CC42FC5B21185EC600E80907 /* TopHighlightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC42FC5A21185EC600E80907 /* TopHighlightTests.swift */; };
+		CC42FC5D21185F2900E80907 /* Full2TopHighlights.json in Resources */ = {isa = PBXBuildFile; fileRef = CC42FC5C21185F2900E80907 /* Full2TopHighlights.json */; };
+		CC42FC5F21185F6000E80907 /* BadJsonTopHighlights.json in Resources */ = {isa = PBXBuildFile; fileRef = CC42FC5E21185F6000E80907 /* BadJsonTopHighlights.json */; };
+		CC42FC6121185F9A00E80907 /* TypeMissingJsonTopHighlights.json in Resources */ = {isa = PBXBuildFile; fileRef = CC42FC6021185F9A00E80907 /* TypeMissingJsonTopHighlights.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +129,16 @@
 		CC42FC452112EC5B00E80907 /* DashboardPaymentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardPaymentViewModel.swift; sourceTree = "<group>"; };
 		CC42FC472112FC2500E80907 /* DashboardPaymentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardPaymentCell.swift; sourceTree = "<group>"; };
 		CC42FC4921144ECE00E80907 /* PaymentDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentDetailViewController.swift; sourceTree = "<group>"; };
+		CC42FC4E211845D200E80907 /* DashboardInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardInteractorTests.swift; sourceTree = "<group>"; };
+		CC42FC5021184B8E00E80907 /* DashboardModuleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardModuleTests.swift; sourceTree = "<group>"; };
+		CC42FC5221184D1400E80907 /* DashboardPaymentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardPaymentTests.swift; sourceTree = "<group>"; };
+		CC42FC5421184D8D00E80907 /* Full3Payments.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Full3Payments.json; sourceTree = "<group>"; };
+		CC42FC5621184DDA00E80907 /* BadJsonPayment.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BadJsonPayment.json; sourceTree = "<group>"; };
+		CC42FC5821184E3600E80907 /* IDMissingJsonPayment.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = IDMissingJsonPayment.json; sourceTree = "<group>"; };
+		CC42FC5A21185EC600E80907 /* TopHighlightTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopHighlightTests.swift; sourceTree = "<group>"; };
+		CC42FC5C21185F2900E80907 /* Full2TopHighlights.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Full2TopHighlights.json; sourceTree = "<group>"; };
+		CC42FC5E21185F6000E80907 /* BadJsonTopHighlights.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BadJsonTopHighlights.json; sourceTree = "<group>"; };
+		CC42FC6021185F9A00E80907 /* TypeMissingJsonTopHighlights.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TypeMissingJsonTopHighlights.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +228,7 @@
 		3E5987832061879F0024F7F7 /* EventEmitterDemoTests */ = {
 			isa = PBXGroup;
 			children = (
+				CC42FC4B211845A300E80907 /* Modules */,
 				3E5987842061879F0024F7F7 /* APIClientArchitectureDemoTests.swift */,
 				3E5987862061879F0024F7F7 /* Info.plist */,
 			);
@@ -258,6 +279,7 @@
 		CC42FC1C210B07A800E80907 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
+				CC42FC1F210B11DA00E80907 /* DashboardModule.swift */,
 				CC42FC3A2110543A00E80907 /* Entity */,
 				CC42FC392110542500E80907 /* Presentation */,
 			);
@@ -287,12 +309,44 @@
 		CC42FC3A2110543A00E80907 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				CC42FC1F210B11DA00E80907 /* DashboardModule.swift */,
 				CC42FC29210B15E300E80907 /* DashboardInteractor.swift */,
 				CC42FC2D210B5DA300E80907 /* DashboardPayment.swift */,
 				CC42FC33210F1CA300E80907 /* TopHighlight.swift */,
 				CC42FC2F210B5E8800E80907 /* Payments.json */,
 				CC42FC31210F155700E80907 /* TopHighlights.json */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		CC42FC4B211845A300E80907 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				CC42FC4C211845AB00E80907 /* Dashboard */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		CC42FC4C211845AB00E80907 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				CC42FC4D211845B200E80907 /* Entity */,
+				CC42FC5021184B8E00E80907 /* DashboardModuleTests.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		CC42FC4D211845B200E80907 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				CC42FC4E211845D200E80907 /* DashboardInteractorTests.swift */,
+				CC42FC5221184D1400E80907 /* DashboardPaymentTests.swift */,
+				CC42FC5A21185EC600E80907 /* TopHighlightTests.swift */,
+				CC42FC5421184D8D00E80907 /* Full3Payments.json */,
+				CC42FC5621184DDA00E80907 /* BadJsonPayment.json */,
+				CC42FC5821184E3600E80907 /* IDMissingJsonPayment.json */,
+				CC42FC5C21185F2900E80907 /* Full2TopHighlights.json */,
+				CC42FC5E21185F6000E80907 /* BadJsonTopHighlights.json */,
+				CC42FC6021185F9A00E80907 /* TypeMissingJsonTopHighlights.json */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -420,6 +474,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC42FC5F21185F6000E80907 /* BadJsonTopHighlights.json in Resources */,
+				CC42FC5721184DDA00E80907 /* BadJsonPayment.json in Resources */,
+				CC42FC5521184D8D00E80907 /* Full3Payments.json in Resources */,
+				CC42FC6121185F9A00E80907 /* TypeMissingJsonTopHighlights.json in Resources */,
+				CC42FC5D21185F2900E80907 /* Full2TopHighlights.json in Resources */,
+				CC42FC5921184E3600E80907 /* IDMissingJsonPayment.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,7 +536,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC42FC5121184B8E00E80907 /* DashboardModuleTests.swift in Sources */,
+				CC42FC5B21185EC600E80907 /* TopHighlightTests.swift in Sources */,
 				3E5987852061879F0024F7F7 /* APIClientArchitectureDemoTests.swift in Sources */,
+				CC42FC4F211845D200E80907 /* DashboardInteractorTests.swift in Sources */,
+				CC42FC5321184D1400E80907 /* DashboardPaymentTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -671,9 +735,9 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JP9LNGT4C2;
-				INFOPLIST_FILE = APIClientArchitectureDemoTests/Info.plist;
+				INFOPLIST_FILE = EventEmitterDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = mdc.APIClientArchitectureDemoTests;
+				PRODUCT_BUNDLE_IDENTIFIER = mdc.EventEmitterDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -688,9 +752,9 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JP9LNGT4C2;
-				INFOPLIST_FILE = APIClientArchitectureDemoTests/Info.plist;
+				INFOPLIST_FILE = EventEmitterDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = mdc.APIClientArchitectureDemoTests;
+				PRODUCT_BUNDLE_IDENTIFIER = mdc.EventEmitterDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -704,13 +768,13 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JP9LNGT4C2;
-				INFOPLIST_FILE = APIClientArchitectureDemoUITests/Info.plist;
+				INFOPLIST_FILE = EventEmitterDemoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = mdc.APIClientArchitectureDemoUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = mdc.EventEmitterDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = APIClientArchitectureDemo;
+				TEST_TARGET_NAME = EventEmitterDemo;
 			};
 			name = Debug;
 		};
@@ -720,13 +784,13 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JP9LNGT4C2;
-				INFOPLIST_FILE = APIClientArchitectureDemoUITests/Info.plist;
+				INFOPLIST_FILE = EventEmitterDemoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = mdc.APIClientArchitectureDemoUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = mdc.EventEmitterDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = APIClientArchitectureDemo;
+				TEST_TARGET_NAME = EventEmitterDemo;
 			};
 			name = Release;
 		};

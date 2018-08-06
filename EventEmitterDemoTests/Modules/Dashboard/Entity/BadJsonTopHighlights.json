@@ -1,0 +1,16 @@
+{
+                 {
+                 "type": "C1",
+                 "title": "Double charge, perhaps?",
+                 "amount": -246.40,
+                 "from": "Fellow Brothers Ltd.",
+                 "text": "Amount was double the last time, when it was -123.20",
+                 },
+                 {
+                 "type": "S1",
+                 "title": "Savings on electricity",
+                 "amount": 82.00,
+                 "from": "Northern Electrica Ltd.",
+                 "text": "Considering your 1 year history of utility costs, there is potential to save 82.00 if moving to aforemenationed electricity provider.",
+                 }
+}
