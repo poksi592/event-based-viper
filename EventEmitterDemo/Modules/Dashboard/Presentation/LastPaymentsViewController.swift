@@ -19,7 +19,11 @@ class LastPaymentsViewController: UITableViewController, RoutableViewControllerT
         super.viewDidLoad()
         dashboardPresenter = presenter as? DashboardPresenter
         tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 40
+        tableView.estimatedRowHeight = 60
+        
+        self.tableView.register(UINib(
+            nibName: "DashboardPaymentCell",
+            bundle: nil).self, forCellReuseIdentifier: "DashboardPaymentCell")
 
         dashboardPresenter?.getLastPayments { [weak self] in
                 

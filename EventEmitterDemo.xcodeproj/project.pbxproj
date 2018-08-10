@@ -65,6 +65,7 @@
 		CC42FC68211885E500E80907 /* DashboardPaymentViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC42FC67211885E500E80907 /* DashboardPaymentViewModelTests.swift */; };
 		CC42FC6A2118889300E80907 /* DashboardPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC42FC692118889300E80907 /* DashboardPresenterTests.swift */; };
 		CC42FC6C2118A35300E80907 /* DashboardViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC42FC6B2118A35300E80907 /* DashboardViewControllerTests.swift */; };
+		CC42FCAA211DB68200E80907 /* DashboardPaymentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC42FCA9211DB68200E80907 /* DashboardPaymentCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -149,6 +150,7 @@
 		CC42FC67211885E500E80907 /* DashboardPaymentViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardPaymentViewModelTests.swift; sourceTree = "<group>"; };
 		CC42FC692118889300E80907 /* DashboardPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardPresenterTests.swift; sourceTree = "<group>"; };
 		CC42FC6B2118A35300E80907 /* DashboardViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewControllerTests.swift; sourceTree = "<group>"; };
+		CC42FCA9211DB68200E80907 /* DashboardPaymentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardPaymentCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -312,6 +314,7 @@
 				CC42FC452112EC5B00E80907 /* DashboardPaymentViewModel.swift */,
 				CC42FC472112FC2500E80907 /* DashboardPaymentCell.swift */,
 				CC42FC4921144ECE00E80907 /* PaymentDetailViewController.swift */,
+				CC42FCA9211DB68200E80907 /* DashboardPaymentCell.xib */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -488,6 +491,7 @@
 				CC42FC36210F56F100E80907 /* TopHighlightView.xib in Resources */,
 				3E3FE57D20B433AB000C3783 /* PaymentsStoryboard.storyboard in Resources */,
 				CC42FC30210B5E8800E80907 /* Payments.json in Resources */,
+				CC42FCAA211DB68200E80907 /* DashboardPaymentCell.xib in Resources */,
 				CC42FC32210F155700E80907 /* TopHighlights.json in Resources */,
 				3E5987752061879F0024F7F7 /* Main.storyboard in Resources */,
 			);
