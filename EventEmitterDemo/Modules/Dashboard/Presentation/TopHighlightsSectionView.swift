@@ -43,8 +43,8 @@ class TopHighlightsSectionView: UIStackView {
         
         highlighViews.forEach { view  in
             
-            view.value?.from.isHidden = isExpanded
-            view.value?.text.isHidden = isExpanded
+            view.value?.from.isHidden = !isExpanded
+            view.value?.text.isHidden = !isExpanded
         }
     }
 }
