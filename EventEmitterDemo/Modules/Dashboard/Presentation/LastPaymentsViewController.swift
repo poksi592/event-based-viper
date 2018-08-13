@@ -9,7 +9,12 @@
 import Foundation
 import UIKit
 
-class LastPaymentsViewController: UITableViewController, RoutableViewControllerType {
+class LastPaymentsViewController: UITableViewController, RoutableViewControllerType, EventEmitting {
+    
+    // MARK: EventEmitting
+    typealias EventEmitter = DashboardEventEmitter
+    var eventEmitter: DashboardEventEmitter? = nil
+    // 
     
     weak var presenter: ModulePresentable?
     private weak var dashboardPresenter: DashboardPresenter?
@@ -48,6 +53,7 @@ class LastPaymentsViewController: UITableViewController, RoutableViewControllerT
             cell.date.text = viewModel.date
             cell.recipient.text = viewModel.recipientName
             cell.amount.text = viewModel.amount
+            cell.id = viewModel.id
         }
         return cell
     }

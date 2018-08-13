@@ -9,9 +9,20 @@
 import Foundation
 import UIKit
 
-class DashboardPaymentCell: UITableViewCell {
+class DashboardPaymentCell: UITableViewCell, EventEmitting {
+    
+    // MARK: EventEmitting
+    typealias EventEmitter = DashboardEventEmitter
+    var eventEmitter: DashboardEventEmitter? = nil
+    //
     
     @IBOutlet weak var date: UILabel!
     @IBOutlet weak var recipient: UILabel!
     @IBOutlet weak var amount: UILabel!
+    var id: String?
+    
+    @IBAction func refundButtonTapped(sender: UIButton) {
+        
+        eventEmitter?.notify(eventPayload: [DashboardEvent.refundTapped.rawValue: id ?? ""])
+    }
 }

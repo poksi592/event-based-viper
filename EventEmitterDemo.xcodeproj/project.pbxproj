@@ -66,6 +66,8 @@
 		CC42FC6A2118889300E80907 /* DashboardPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC42FC692118889300E80907 /* DashboardPresenterTests.swift */; };
 		CC42FC6C2118A35300E80907 /* DashboardViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC42FC6B2118A35300E80907 /* DashboardViewControllerTests.swift */; };
 		CC42FCAA211DB68200E80907 /* DashboardPaymentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC42FCA9211DB68200E80907 /* DashboardPaymentCell.xib */; };
+		CC42FCAD2121D55A00E80907 /* EventEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC42FCAC2121D55A00E80907 /* EventEmitter.swift */; };
+		CC42FCAF2121D88400E80907 /* DashboardEventEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC42FCAE2121D88400E80907 /* DashboardEventEmitter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -151,6 +153,8 @@
 		CC42FC692118889300E80907 /* DashboardPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardPresenterTests.swift; sourceTree = "<group>"; };
 		CC42FC6B2118A35300E80907 /* DashboardViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewControllerTests.swift; sourceTree = "<group>"; };
 		CC42FCA9211DB68200E80907 /* DashboardPaymentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardPaymentCell.xib; sourceTree = "<group>"; };
+		CC42FCAC2121D55A00E80907 /* EventEmitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventEmitter.swift; sourceTree = "<group>"; };
+		CC42FCAE2121D88400E80907 /* DashboardEventEmitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardEventEmitter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +226,7 @@
 		3E59876E2061879F0024F7F7 /* EventEmitterDemo */ = {
 			isa = PBXGroup;
 			children = (
+				CC42FCAB2121D52D00E80907 /* Events */,
 				3E3FE54120B36435000C3783 /* Storyboards */,
 				3E6F83DF20657527004AF262 /* Helpers */,
 				3E5987A620618A290024F7F7 /* Modules */,
@@ -292,6 +297,7 @@
 			isa = PBXGroup;
 			children = (
 				CC42FC1F210B11DA00E80907 /* DashboardModule.swift */,
+				CC42FCAE2121D88400E80907 /* DashboardEventEmitter.swift */,
 				CC42FC3A2110543A00E80907 /* Entity */,
 				CC42FC392110542500E80907 /* Presentation */,
 			);
@@ -375,6 +381,14 @@
 				CC42FC6B2118A35300E80907 /* DashboardViewControllerTests.swift */,
 			);
 			path = Presentation;
+			sourceTree = "<group>";
+		};
+		CC42FCAB2121D52D00E80907 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				CC42FCAC2121D55A00E80907 /* EventEmitter.swift */,
+			);
+			path = Events;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -549,12 +563,14 @@
 				3E6F83E12065756F004AF262 /* URLExtensions.swift in Sources */,
 				CC281D8F20E3935C00CE2673 /* WeakContainer.swift in Sources */,
 				CC281D9120E4C9CF00CE2673 /* ApplicationServices.swift in Sources */,
+				CC42FCAD2121D55A00E80907 /* EventEmitter.swift in Sources */,
 				3E5987702061879F0024F7F7 /* AppDelegate.swift in Sources */,
 				CC42FC4221108EC800E80907 /* UIViewExtensions.swift in Sources */,
 				CC281D9F20E6428400CE2673 /* PaymentsWireframe.swift in Sources */,
 				CC42FC34210F1CA300E80907 /* TopHighlight.swift in Sources */,
 				3E6F83E52068C5D3004AF262 /* PaymentsModule.swift in Sources */,
 				CC42FC38210F570800E80907 /* TopHighlightView.swift in Sources */,
+				CC42FCAF2121D88400E80907 /* DashboardEventEmitter.swift in Sources */,
 				CC42FC3E211066EB00E80907 /* TopHighlightViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

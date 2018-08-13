@@ -9,8 +9,13 @@
 import Foundation
 import UIKit
 
-class DashboardViewController: UIViewController, RoutableViewControllerType {
-
+class DashboardViewController: UIViewController, RoutableViewControllerType, EventEmitting {
+    
+    // MARK: EventEmitting
+    typealias EventEmitter = DashboardEventEmitter
+    var eventEmitter: DashboardEventEmitter? = DashboardEventEmitter()
+    //
+    
     @IBOutlet weak var highlights: TopHighlightsSectionView!
     
     var presenter: ModulePresentable?

@@ -8,7 +8,27 @@
 
 import Foundation
 
-class DashboardPresenter: ModuleRoutable, ModulePresentable {
+class DashboardPresenter: ModuleRoutable, ModulePresentable, EventEmitting {
+    
+    // MARK: EventEmitting
+    typealias EventEmitter = DashboardEventEmitter
+    var eventEmitter: DashboardEventEmitter? = DashboardEventEmitter()
+    //
+    
+    init() {
+        subscribeToEvents()
+    }
+    
+    // MARK: EventEmitting Subscribing to events
+    func subscribeToEvents() {
+        
+        eventEmitter?.subscribe { [weak self] (payload) in
+            
+            if (payload[DashboardEvent.refundTapped.rawValue] != nil) {
+                self?.callback?(payload, nil, nil, nil)
+            }
+        }
+    }
     
     var wireframe: WireframeType = DashboardWireframe()
     var interactor = DashboardInteractor()
