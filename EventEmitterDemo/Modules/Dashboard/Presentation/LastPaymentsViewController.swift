@@ -54,6 +54,7 @@ class LastPaymentsViewController: UITableViewController, RoutableViewControllerT
             cell.recipient.text = viewModel.recipientName
             cell.amount.text = viewModel.amount
             cell.id = viewModel.id
+            cell.eventEmitter = eventEmitter
         }
         return cell
     }

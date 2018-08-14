@@ -28,7 +28,10 @@ class ApplicationServices {
         }
         
         if let url = showDashboardUrl {
-            appRouter.open(url: url, callback: nil)
+            appRouter.open(url: url) { (payload, data, urlResponse, error) in
+                
+                print(payload)
+            }
         }
     }
     

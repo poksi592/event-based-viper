@@ -13,13 +13,12 @@ class DashboardViewController: UIViewController, RoutableViewControllerType, Eve
     
     // MARK: EventEmitting
     typealias EventEmitter = DashboardEventEmitter
-    var eventEmitter: DashboardEventEmitter? = DashboardEventEmitter()
+    var eventEmitter: DashboardEventEmitter? = nil
     //
     
     @IBOutlet weak var highlights: TopHighlightsSectionView!
     
     var presenter: ModulePresentable?
-    private weak var dashboardPresenter: DashboardPresenter?
     
     override func viewDidLoad() {
         
@@ -65,12 +64,15 @@ class DashboardViewController: UIViewController, RoutableViewControllerType, Eve
         if segue.identifier == "LastPaymentsSegue",
             let lastPaymentsViewController = segue.destination as? LastPaymentsViewController {
             
-            lastPaymentsViewController.presenter = self.presenter
+            lastPaymentsViewController.presenter = presenter
+            if let presenter = presenter as? DashboardPresenter {
+                lastPaymentsViewController.eventEmitter = presenter.eventEmitter
+            }
         }
         else if segue.identifier == "PaymentDetailSegue",
             let paymentDetailsViewController = segue.destination as? PaymentDetailViewController {
             
-            paymentDetailsViewController.presenter = self.presenter
+            paymentDetailsViewController.presenter = presenter
         }
     }
 }
