@@ -24,8 +24,7 @@ public protocol EventEmitting {
 public protocol EventEmitterType: class {
     
     typealias EventCallbackClosure = ([String: Any]) -> Void
-    
-    var eventPayload: [String: Any] { get set }
+
     /**
      Function adds subscriber's callback to
      - parameters:
@@ -65,7 +64,6 @@ extension EventEmitterType {
         
         serialQueue.sync {
             
-            self.eventPayload = eventPayload
             callbacks.forEach { $0(eventPayload) }
         }
     }

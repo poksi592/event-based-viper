@@ -14,8 +14,7 @@ enum DashboardEvent: String {
 }
 
 final class DashboardEventEmitter: EventEmitterType {
-    
-    var eventPayload: [String: Any] = [:]
+
     var callbacks: [EventCallbackClosure] = []
     var serialQueue = DispatchQueue(label: "DashboardNotifyQueue")
     
