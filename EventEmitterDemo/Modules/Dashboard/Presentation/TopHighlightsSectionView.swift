@@ -9,7 +9,12 @@
 import Foundation
 import UIKit
 
-class TopHighlightsSectionView: UIStackView {
+class TopHighlightsSectionView: UIStackView, EventEmitting {
+    
+    // MARK: EventEmitting
+    typealias EventEmitter = DashboardEventEmitter
+    var eventEmitter: DashboardEventEmitter? = nil
+    //
     
     var highlighViews: [WeakContainer<TopHighlightView>] = []
     
@@ -45,6 +50,10 @@ class TopHighlightsSectionView: UIStackView {
             
             view.value?.from.isHidden = !isExpanded
             view.value?.text.isHidden = !isExpanded
+        }
+        
+        if isExpanded == true {
+            eventEmitter?.notify(eventPayload: ["analytics": [DashboardEvent.expandTopHighlights.rawValue: ""]])
         }
     }
 }

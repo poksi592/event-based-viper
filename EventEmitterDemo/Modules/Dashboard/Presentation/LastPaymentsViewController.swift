@@ -23,7 +23,7 @@ class LastPaymentsViewController: UITableViewController, RoutableViewControllerT
         
         super.viewDidLoad()
         dashboardPresenter = presenter as? DashboardPresenter
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 60
         
         self.tableView.register(UINib(

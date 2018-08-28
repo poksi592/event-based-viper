@@ -71,7 +71,7 @@ class MockDashboardPresenter: DashboardPresenter {
     
     let viewModel: DashboardPaymentViewModel
     
-    override init() {
+    required init() {
         
         let model = DashboardPayment(id: 2343,
                                      date: 1532700972,

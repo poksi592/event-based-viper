@@ -168,7 +168,7 @@ extension WireframeType {
                     let window = delegate.window,
                     let rootViewController = window.rootViewController else { return nil }
                 
-                return rootViewController.topmostNavigationController()?.childViewControllers.last?.topPresentedController() ?? rootViewController.topPresentedController()
+                return rootViewController.topmostNavigationController()?.children.last?.topPresentedController() ?? rootViewController.topPresentedController()
             }
             
             switch self.presentationMode {

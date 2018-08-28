@@ -46,6 +46,11 @@ public protocol EventEmitterType: class {
      Queue used for notifying
      */
     var serialQueue: DispatchQueue { get set }
+    
+    /**
+     Function which notifies all the "closures" with the passed payload
+     */
+    func notify(eventPayload: [String: Any])
 }
 
 extension EventEmitterType {

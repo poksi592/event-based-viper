@@ -9,12 +9,7 @@
 import Foundation
 import UIKit
 
-class DashboardViewController: UIViewController, RoutableViewControllerType, EventEmitting {
-    
-    // MARK: EventEmitting
-    typealias EventEmitter = DashboardEventEmitter
-    var eventEmitter: DashboardEventEmitter? = nil
-    //
+class DashboardViewController: UIViewController, RoutableViewControllerType {
     
     @IBOutlet weak var highlights: TopHighlightsSectionView!
     
@@ -36,6 +31,9 @@ class DashboardViewController: UIViewController, RoutableViewControllerType, Eve
                     self?.highlights.updateSectionView(with: viewModel)
                 }
             }
+            
+            // Pass event emitter to section view
+            highlights.eventEmitter = presenter.eventEmitter
         }
     }
     
@@ -68,11 +66,6 @@ class DashboardViewController: UIViewController, RoutableViewControllerType, Eve
             if let presenter = presenter as? DashboardPresenter {
                 lastPaymentsViewController.eventEmitter = presenter.eventEmitter
             }
-        }
-        else if segue.identifier == "PaymentDetailSegue",
-            let paymentDetailsViewController = segue.destination as? PaymentDetailViewController {
-            
-            paymentDetailsViewController.presenter = presenter
         }
     }
 }

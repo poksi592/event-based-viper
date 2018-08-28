@@ -68,6 +68,7 @@
 		CC42FCAA211DB68200E80907 /* DashboardPaymentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC42FCA9211DB68200E80907 /* DashboardPaymentCell.xib */; };
 		CC42FCAD2121D55A00E80907 /* EventEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC42FCAC2121D55A00E80907 /* EventEmitter.swift */; };
 		CC42FCAF2121D88400E80907 /* DashboardEventEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC42FCAE2121D88400E80907 /* DashboardEventEmitter.swift */; };
+		CC858FC7213535B10047BE28 /* DashboardAnalytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC858FC6213535B10047BE28 /* DashboardAnalytics.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -155,6 +156,7 @@
 		CC42FCA9211DB68200E80907 /* DashboardPaymentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardPaymentCell.xib; sourceTree = "<group>"; };
 		CC42FCAC2121D55A00E80907 /* EventEmitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventEmitter.swift; sourceTree = "<group>"; };
 		CC42FCAE2121D88400E80907 /* DashboardEventEmitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardEventEmitter.swift; sourceTree = "<group>"; };
+		CC858FC6213535B10047BE28 /* DashboardAnalytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardAnalytics.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -333,6 +335,7 @@
 				CC42FC33210F1CA300E80907 /* TopHighlight.swift */,
 				CC42FC2F210B5E8800E80907 /* Payments.json */,
 				CC42FC31210F155700E80907 /* TopHighlights.json */,
+				CC858FC6213535B10047BE28 /* DashboardAnalytics.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -459,15 +462,18 @@
 				TargetAttributes = {
 					3E59876B2061879F0024F7F7 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 					};
 					3E59877F2061879F0024F7F7 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 3E59876B2061879F0024F7F7;
 					};
 					3E59878A2061879F0024F7F7 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 3E59876B2061879F0024F7F7;
 					};
@@ -571,6 +577,7 @@
 				3E6F83E52068C5D3004AF262 /* PaymentsModule.swift in Sources */,
 				CC42FC38210F570800E80907 /* TopHighlightView.swift in Sources */,
 				CC42FCAF2121D88400E80907 /* DashboardEventEmitter.swift in Sources */,
+				CC858FC7213535B10047BE28 /* DashboardAnalytics.swift in Sources */,
 				CC42FC3E211066EB00E80907 /* TopHighlightViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -756,7 +763,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mdc.ModuleArchitectureDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -771,7 +778,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mdc.ModuleArchitectureDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -787,7 +794,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mdc.EventEmitterDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EventEmitterDemo.app/EventEmitterDemo";
 			};
@@ -804,7 +811,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mdc.EventEmitterDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EventEmitterDemo.app/EventEmitterDemo";
 			};
@@ -820,7 +827,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mdc.EventEmitterDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = EventEmitterDemo;
 			};
@@ -836,7 +843,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mdc.EventEmitterDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = EventEmitterDemo;
 			};

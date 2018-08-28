@@ -15,6 +15,8 @@ class PaymentsPresenter: ModuleRoutable, ModulePresentable {
     private var parameters: ModuleParameters?
     private var callback: ModuleCallback?
     
+    required init() {}
+    
     static func routable() -> ModuleRoutable {
         return self.init()
     }

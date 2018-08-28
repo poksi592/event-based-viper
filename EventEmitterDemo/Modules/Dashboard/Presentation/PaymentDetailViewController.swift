@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class PaymentDetailViewController: UIViewController, RoutableViewControllerType {
+class PaymentDetailViewController: UIViewController, RoutableViewControllerType, EventEmitting {
     
     @IBOutlet var id: UILabel!
     @IBOutlet var date: UILabel!
@@ -18,6 +18,11 @@ class PaymentDetailViewController: UIViewController, RoutableViewControllerType 
     @IBOutlet var recipientAccountNo: UILabel!
     @IBOutlet var recipientName: UILabel!
     @IBOutlet var text: UILabel!
+    
+    // MARK: EventEmitting
+    typealias EventEmitter = DashboardEventEmitter
+    var eventEmitter: DashboardEventEmitter? = nil
+    //
     
     weak var presenter: ModulePresentable?
     private weak var dashboardPresenter: DashboardPresenter?
@@ -48,6 +53,9 @@ class PaymentDetailViewController: UIViewController, RoutableViewControllerType 
             recipientAccountNo.text = viewModel.recipientAccountNo
             recipientName.text = viewModel.recipientName
             text.text = viewModel.description
+        
+            // Event Emitting
+            eventEmitter?.notify(eventPayload: ["analytics": [DashboardEvent.paymentDetailOpen.rawValue: viewModel.id]])
         }
     }
     

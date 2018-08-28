@@ -23,6 +23,7 @@ class DashboardPaymentCell: UITableViewCell, EventEmitting {
     
     @IBAction func refundButtonTapped(sender: UIButton) {
         
-        eventEmitter?.notify(eventPayload: [DashboardEvent.refundTapped.rawValue: id ?? ""])
+        eventEmitter?.notify(eventPayload: [DashboardEvent.refundTapped.rawValue: id ?? "",
+                                            "analytics": [DashboardEvent.refundTapped.rawValue: id ?? ""]])
     }
 }

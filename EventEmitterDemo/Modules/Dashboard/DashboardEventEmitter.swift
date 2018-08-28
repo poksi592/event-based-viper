@@ -11,6 +11,8 @@ import Foundation
 enum DashboardEvent: String {
     
     case refundTapped
+    case expandTopHighlights
+    case paymentDetailOpen
 }
 
 final class DashboardEventEmitter: EventEmitterType {

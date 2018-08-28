@@ -15,23 +15,25 @@ class DashboardPresenter: ModuleRoutable, ModulePresentable, EventEmitting {
     var eventEmitter: DashboardEventEmitter? = DashboardEventEmitter()
     //
     
-    init() {
-        subscribeToEvents()
-    }
-    
     // MARK: EventEmitting Subscribing to events
     func subscribeToEvents() {
         
         eventEmitter?.subscribe { [weak self] (payload) in
             
-            if (payload[DashboardEvent.refundTapped.rawValue] != nil) {
-                self?.callback?(payload, nil, nil, nil)
+            let refundTappedPayload = payload.filter { $0.key == DashboardEvent.refundTapped.rawValue }
+            if refundTappedPayload.isEmpty == false {
+                self?.callback?(refundTappedPayload, nil, nil, nil)
             }
         }
     }
     
+    required init() {
+        subscribeToEvents()
+    }
+    
     var wireframe: WireframeType = DashboardWireframe()
     var interactor = DashboardInteractor()
+    private(set) var dashboardAnalytics: DashboardAnalytics?
     private(set) var parameters: ModuleParameters?
     private(set) var callback: ModuleCallback?
     
@@ -51,6 +53,7 @@ class DashboardPresenter: ModuleRoutable, ModulePresentable, EventEmitting {
         
         self.parameters = parameters
         self.callback = callback
+        self.dashboardAnalytics = DashboardAnalytics(callback: callback, eventEmitter: eventEmitter)
         
         if path == "/present" {
             let _ = wireframe.presentViewController(ofType: DashboardViewController.self,
@@ -99,7 +102,8 @@ class DashboardPresenter: ModuleRoutable, ModulePresentable, EventEmitting {
         let viewController = wireframe.presentViewController(ofType: PaymentDetailViewController.self,
                                                              presenter: self,
                                                              parameters: ["presentationMode": "navigationStack",
-                                                                          "viewController": "PaymentDetailViewControllerId"])
-        return viewController as? PaymentDetailViewController
+                                                                          "viewController": "PaymentDetailViewControllerId"]) as? PaymentDetailViewController
+        viewController?.eventEmitter = eventEmitter
+        return viewController
     }
 }
