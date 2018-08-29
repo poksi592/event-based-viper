@@ -52,6 +52,7 @@ class TopHighlightsSectionView: UIStackView, EventEmitting {
             view.value?.text.isHidden = !isExpanded
         }
         
+        // Emitting the event
         if isExpanded == true {
             eventEmitter?.notify(eventPayload: ["analytics": [DashboardEvent.expandTopHighlights.rawValue: ""]])
         }

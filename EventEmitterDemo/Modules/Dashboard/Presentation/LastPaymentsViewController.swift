@@ -61,6 +61,6 @@ class LastPaymentsViewController: UITableViewController, RoutableViewControllerT
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        dashboardPresenter?.selectedPayment(index: indexPath.row)
+        let _ = dashboardPresenter?.selectedPayment(index: indexPath.row)
     }
 }
